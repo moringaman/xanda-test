@@ -1,4 +1,7 @@
 $primary-color: #4AD87F;
+$secondary-color: #000000;
+$text-color-brown: #494947;
+$text-color-light: #FFFFFF;
 
 
 * {
@@ -67,6 +70,7 @@ $primary-color: #4AD87F;
             grid-column: 2;
             font-size: 0.8em;
             line-height: 1.8em;
+            color: $text-color-brown;
           }
           &_coins {
             height: 1rem;
@@ -124,6 +128,11 @@ $primary-color: #4AD87F;
         bottom: 5rem;
         // transform: translateY(20rem);
       }
+      &-message {
+        font-size: 1.5rem;
+        color: $text-color-brown;
+        transform: translate(8rem, 18rem);
+      }
       .title {
         font-size: 3rem;
         margin-bottom: 2rem;
@@ -139,6 +148,9 @@ $primary-color: #4AD87F;
         font-size: 1.3rem;
         align-content: left;
         // right: 1rem;
+        &-title {
+          color: $text-color-brown;
+        }
       }
       .cart-item:not(:first-child) {
         border-top: 1px solid black;
@@ -214,7 +226,7 @@ $primary-color: #4AD87F;
       transform: translateX(10rem);
     }
 
-// Checkout Sales
+// Checkout Styles
 
 .checkout {
   background-color: $primary-color;
@@ -230,11 +242,18 @@ $primary-color: #4AD87F;
     height: 60vh;
     margin: 2.5rem auto;
   }
+  &-totals {
+    margin-top: 3rem;
+    // width: 5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    span {
+      color: $text-color-brown;
+      margin-right: 2rem;
+    }
+  }
   &-items {
     margin-top: 3rem;
-  }
-  &-item:not(:first-child) {
-    border-top: 1px solid black;
   }
   &-item {
     display: grid;
@@ -243,7 +262,8 @@ $primary-color: #4AD87F;
     width: 100%;
     max-height: 32rem;
     margin-top: 2rem;
-    padding-top: 2rem;
+    border-bottom: 1px solid black;
+    padding-top: 1rem;
     &_image {
       width: 3rem;
       height: 4rem;

@@ -25,7 +25,7 @@ class ShoppingCart extends React.Component {
   renderCartMessage(props) {
     if (props.items.length < 1) {
       return(
-        <p>No items</p>
+        <p className="cart-pane-message">No items</p>
       )
     }
   }

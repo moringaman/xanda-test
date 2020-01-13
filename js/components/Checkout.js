@@ -21,9 +21,10 @@ class Checkout extends React.Component {
         <div className="checkout-items">
           { this.renderList()}
         </div>
+        <div className="checkout-totals">
+          <p><span>Total</span> {this.props.cartTotal} Gil</p>
+        </div>
       </div>
-      <p>Total</p>
-      <p>{this.props.cartTotal}</p>
     </div>
     )
   }
