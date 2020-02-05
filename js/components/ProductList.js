@@ -30,14 +30,12 @@ class ProductList extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return <div className="products">{this.renderList()}</div>
   }
 
 }
 
   const mapStateToProps = (state) => {
-    console.log(state)
     return {
       items: state.items,
       selectedItems: state.selectedItems

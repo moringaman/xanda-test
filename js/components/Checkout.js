@@ -51,7 +51,7 @@ class Checkout extends React.Component {
 const mapStateToProps = (state) => {
   return {
     items: state.selectedItems,
-    cartTotal: parseInt(state.selectedItems.reduce((acc, item) => acc + item.Price, 1))
+    cartTotal: parseInt(state.selectedItems.reduce((acc, item) => acc + item.Price, 0))
   }
 }
 export default connect(mapStateToProps, {removedItem})(Checkout)
